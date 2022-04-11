@@ -1,0 +1,91 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Oi&display=swap');
+
+*
+{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Advent Pro', sans-serif;
+
+}
+
+body
+{
+	min-height: 100vh;
+	background: #111;
+}
+header
+{
+	position: absolute;
+	top:0;
+	left:0;
+	padding:30px 100px;
+	display:flex;
+	justify-content:space-between;
+	align-items: center;
+	z-index: 10000;
+
+}
+
+header .LOGO{
+	color:#7B7B7B;
+	font-weight: 700;
+	text-decoration: none;
+	font-size:2em;
+	text-transform:uppercase;
+	letter-spacing: 2px;
+	margin-left: 10px;
+}
+
+header ul{
+	display: flex;
+	justify-content: center;
+	align-items: left;
+}
+
+header ul li{
+	list-style: none;
+	margin-left: 10px;
+}
+
+header ul li a{
+	text-decoration: none;
+	padding:6px 15px;
+	color:#7B7B7B
+}
+
+header ul li a:hover
+/*header ul li a.active*/ {
+	background: #fff;;
+	color:#111;
+}
+section{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section img{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+}
+/*section img#moon{
+	mix-blend-mode: screen;
+}*/
+
+#text{
+	position:absolute;
+	color:#fff;
+	white-space: nowrap;
+	font-size: 7.5vw;
+	z-index: 9;
+}

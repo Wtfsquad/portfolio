@@ -1,0 +1,302 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Oi&display=swap');
+
+*
+{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Advent Pro', sans-serif;
+	scroll-behavior: smooth;
+}
+
+body
+{
+	min-height: 500vh;
+	background: #0f1311;
+}
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding:3% 8%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.6s;
+	z-index: 10005;
+}
+
+header.sticky{ /*悬浮menu*/
+	padding:5% 10%;  /*调整白条长宽*/
+	background: linear-gradient(#0f1211, transparent);
+	z-index: 9999;
+}
+
+header .LOGO
+{
+	position: absolute;
+	top:0;
+	left:0;
+	padding:3% 6%;
+	display:flex;
+	justify-content:space-between;
+	align-items: center;
+	z-index: 10000;
+
+
+	color:#fff;
+	font-weight: 900;
+	text-decoration: none;
+	font-size:1em;
+	text-transform:uppercase;
+	letter-spacing: 5px;
+}
+
+header ul{
+	display: flex;
+	justify-content: center;
+	align-items: right;
+
+	position: absolute;
+	display:flex;
+	justify-content:space-between;
+	align-items: right;
+	z-index: 10000;
+	top:0;
+	left:0;
+	padding:3% 73%;
+	letter-spacing: 4px;
+}
+
+header ul li{   /*SURFACE and FISHING*/
+	list-style-type: none;
+	margin-left: 40%;
+	font-weight: 600;
+/*    display: inline-block;
+    position: absolute;*/
+}
+
+header ul li a{
+	text-decoration: none;
+	border-radius: 14px;
+	padding:6px 15px;
+	color:#7B7B7B;
+}
+
+header ul li a:hover
+/*header ul li a.active*/ {
+	background: #ffffffb8;
+	color:#111;
+    z-index: 10001;
+    transition: 0.4s;
+}
+
+p{
+    content: '';
+    width: 100%;
+	height: 80px;
+}
+
+.row{
+    display: flex;
+}
+
+.container{
+    width: 40%;
+    position: relative;
+    transition: transform 500ms;
+    display: block;
+}
+.container img{
+    width: 100%;
+    opacity: 1;
+    height: auto;
+    transition: 0.5s ease-in-out;    
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.159);
+}
+
+.row .container:focus,
+.row .container:hover{
+    transform: scale(1.2);
+    z-index: 1;
+    transition: 0.4s ease;
+
+}
+
+.middle{  
+    /* 悬浮textbox */
+    background-color: #fff;
+    font-size: 1em;
+    padding: 16px 32px;
+    transition: 0.4s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+    border-radius: 70%;
+}
+
+.container:hover  .middle{
+    opacity: 1;    
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.159);
+    border-radius: 3%;
+    transition: 0.5s ease;
+
+}
+
+.text {
+    color: #111;
+    font-size: 1em;
+    padding: 50% 20%;
+}
+
+#btn{   /*FLOAT*/
+	text-decoration: none;
+	padding: 8px 50vw;
+	color:#878787b8;
+	z-index: 100000;	
+	letter-spacing: 5px;
+	font-size: 0.8em;
+	font-weight: 500;
+	position: fixed;
+	bottom: 2%;
+	justify-content: center;
+	align-items: center;
+}
+#btn:hover{
+	color:#ffffff;
+	transition: 0.4s;}
+
+#btn2{
+	text-decoration: none;
+	padding: 8px 3.8%;
+	color:#878787b8;
+	z-index: 100000;	
+	letter-spacing: 5px;
+	font-size: 0.8em;
+	font-weight: 500;
+	position: fixed;
+	bottom: 2%;
+    justify-content: right;
+	align-items: right;
+}
+#btn2:hover{
+	color:#ffffff;
+	transition: 0.4s;}
+
+
+
+@media only screen and (max-width: 800px){
+.container{
+    width: 100%;
+}
+.row .container:focus,
+.row .container:hover{
+    transform: none;
+    z-index: 1;
+}
+}
+
+/*悬浮menu文字header.sticky ul li a{ 
+	color: #e1eae8af; /*
+	z-index: 9999;
+}文字颜色*/
+
+
+
+
+
+/*.row1 img#tcre{
+    width: 40%;
+    height: auto;
+    z-index: 60;
+    display: block;
+    margin-left: 60%;
+
+}
+.row2 img#afternoon{
+    width: 50%;
+    height: auto;
+    z-index: 30;
+    display: block;
+    margin-left: 55%;
+}
+.row3 img#vase{
+    width: 20%;
+    height: auto;
+    z-index: 20;
+
+}
+
+.row3 img#horse{
+    width: 20%;
+    height: auto;
+    z-index: 40;
+}
+.row3 img#chaos{
+    width: 20%;
+    height: auto;
+    z-index: 50;
+}
+
+/*create column*/
+
+  /* Create two equal columns that sits next to each other */
+/*.row1 {
+    display: flex;
+    flex: 50%;
+    padding: 12% 14%;
+
+}
+
+.row2 {
+    display: flex;
+    flex: 50%;
+    padding: 6% 14%;
+
+}
+.row3 {
+    display: flex;
+    /*flex: 50%;
+    padding-left: 5%;
+    flex-direction: row;
+    gap: 4px;
+    min-height: 200px;
+    position: relative;
+    overflow: hidden;*/
+/*    width:100%
+
+}
+
+.row3 img{
+    width:100%;
+}
+
+
+
+.row4 {
+    display: flex;
+    flex: 50%;
+    padding: 6% 14%;
+
+}
+.row5 {
+    display: flex;
+    flex: 50%;
+    padding: 6% 14%;
+
+}   
+
+
+
+.column img{
+    margin-top: 8px;
+    vertical-align: right;
+    align-content: center;
+}*/

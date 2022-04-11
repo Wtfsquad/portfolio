@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Mousemove Yushuo</title>
+		<link rel= "stylesheet" type= "text/css" href="style2.2.css">
+	</head>
+	<body>
+
+
+
+		<section>
+			
+			<img src="fish3.png" data-speed="0" class="layer">
+			<img src="fish2.png" data-speed="0" class="layer">
+			<img src="fish4.png" data-speed="0" class="layer">
+			<h2 class="layer" data-speed="7">Yushuo Ding</h2>
+			<img src="fish6.png" data-speed="0" class="layer"> 
+			<img src="fish5.png" data-speed="2" class="layer">
+			<img src="fish1.png" data-speed="-2" class="layer">
+			
+		</section>
+
+		<script type="text/javascript">
+			document.addEventListener("mousemove", Yushuo);
+			function Yushuo(e){
+				this.querySelectorAll('.layer').forEach(layer =>{
+					const speed = layer.getAttribute('data-speed')
+
+					const x = (window.innerWidth - e.pageX*speed)/100
+					const y = (window.innerHeight - e.pageY/speed)/100
+
+					layer.style.transform = `translateY(${y}px) translateX(${x}px) `
+				})
+			}
+		</script>
+
+		<head>
+			<meta charset="utf-8">
+			<title>Animation Text</title>
+			<link rel="stylesheet" href="style.css">
+		</head>
+		<div class="container">
+  			<span class="text1">Welcome to</span>
+   		 	<span class= "text2">my pond</span>
+    	</div>
+    		<div class="container2">
+  			<span class="text3">Swimming</span>
+   		 	<span class= "text4"><p>every second</p></span>
+   		 
+   		<div class="container3">
+   			<div class=".img-container3-vase">
+   				<img class="vase" src="vase.png" alt=""/>
+   				</div>
+   			<div class=".img-container3-horse">
+   				<img class="horse" src="horse.jpg" alt=""/>
+   				</div>
+   			<div class=".img-container3-afternoon">
+   				<img class="afternoon" src="afternoon.png" alt=""/>
+   				</div>
+   			<div class="slider"></div>
+   		</div>
+   		
+
+
+   		<script src="scroll.js"></script>
+
+
+    	
+    </body>
+	
+</html>
+
+
+

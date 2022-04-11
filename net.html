@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>COLLECTION OF WORKS</title>
+        <link rel="stylesheet" href="styleN.css">
+    </head>
+    <body>
+		<header>
+
+			<a href="#" class="LOGO">YUSHUO DING'S</a>
+			<ul>
+				<li><a href="exp1.html">SURFACE</a></li>
+				<li><a href="pond.html">LAKE</a></li>
+			</ul>
+
+		</header>
+
+        <div>
+            <p>
+
+            </p>
+        </div>
+        <div>
+            <p>
+            <span>
+                CATCH ME
+                <!-- FIND ME AT y7ding@ucsd.edu   -->
+
+            </span>
+            </p>
+                <div class="middle" style="overflow:hidden; background-color: rgba(27, 33, 32, 0.77);"></div>            
+        </div>
+<!-- 
+        <h1></h1> -->
+
+        <section>
+			
+			<!-- <h2 class="layer" data-speed="7">CATCH ME</h2> -->
+			<img src="fish3.png" data-speed="0" class="layer" id="fish3">
+			<img src="fish2.png" data-speed="1.5" class="layer" id="fish2">
+			<img src="fish4.png" data-speed="0.3" class="layer" id="fish1">
+			
+			<img src="fish6.png" data-speed="0.27" class="layer" id="fish6"> 
+			<img src="fish5.png" data-speed="-6" class="layer" id="fish5">
+			<img src="fish1.png" data-speed="8" class="layer" id="fish1">
+			<!--<img src="gradient.png" data-speed="0" class="layer">-->
+			
+		</section>
+
+        <script type="text/javascript">
+			document.addEventListener("mousemove", Yushuo);
+			function Yushuo(e){
+				this.querySelectorAll('.layer').forEach(layer =>{
+					const speed = layer.getAttribute('data-speed')
+
+					const x = (window.innerWidth - e.pageX*speed)/100
+					const y = (window.innerHeight - e.pageY/speed)/40
+
+					layer.style.transform = `translateY(${y}px) translateX(${x}px) `
+				})
+			}
+		</script>
+
+
+    </body>
+</html>

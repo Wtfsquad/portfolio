@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Mousemove Yushuo</title>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet">
+		<link rel= "stylesheet" type= "text/css" href="style.css">
+	</head>
+	<body>
+		<header>
+			<a href="exp1.html" class="LOGO">YUSHUO DING'S</a>
+			<ul>
+				<li><a href="pond.html" class="active">LAKE</a></li>
+				<li><a href="net.html">NET</a></li>
+			</ul>
+		</header>
+
+		<script class="text/javescript">
+			window.addEventListener("scroll", function(){
+				var header = document.querySelector("header");
+				header.classList.toggle("sticky", window.scrollY > 0);
+			})
+		</script>
+
+
+		<section style="overflow:hidden">
+			<h2 id="text">CATCH ME</h2>
+			<a href="#" id="btn">FLOAT</a>
+			<img src="fish6.png" id="fish6">
+			<img src="fish5.png" id="fish5">
+			<img src="fish4.png" id="fish4">
+			<img src="fish3.png" id="fish3">
+			<img src="fish2.png" id="fish2">
+			<img src="fish1.png" id="fish1">
+			<!--<img src="gradient.png" id="gra">-->
+		</section>
+
+		<div style="overflow:hidden;" class="about">
+			<!--<h4>ABOUT ME</h4>-->
+			<p>Hi, I'm <em>Yushuo Ding</em>, a college student majored in Speculative Design. I do digital painting, 3D modeling and product design, including a little UI/UX, like this website. If you'd like to see more projects, please take a dive in <em>Lake</em>!</p>
+		</div>
+
+		<div style="overflow:hidden" class="sec" >
+			<h3>CURRENTLY IN PROGRESS</h3>
+			<p>Still fishing...
+				<br><br>
+				<br><br>
+			</p>
+			<img src="leaf1.png" id="leaf1">
+			<img src="leaf2.png" id="leaf2">
+			<img src="leaf3.png" id="leaf3">
+			<!--<section class="leaf">
+
+			</section>-->
+		</div>
+
+		<script>
+			let text = document.getElementById('text');
+			let btn = document.getElementById('btn');
+			let fish6 = document.getElementById('fish6');
+			let fish5 = document.getElementById('fish5');
+			let fish4 = document.getElementById('fish4');
+			let fish3 = document.getElementById('fish3');
+			let fish2 = document.getElementById('fish2');
+			let fish1 = document.getElementById('fish1');
+
+			window.addEventListener('scroll', function(){
+				let value = window.scrollY;
+				fish2.style.top = value * 0.12 + 'px', fish2.style.left = value * -0.03 + 'px';;
+				fish1.style.top = value * 0.3 + 'px', fish1.style.left = value * -0.006 + 'px';
+				fish5.style.top = value * 0.5 + 'px', fish5.style.left = value * -0.1 + 'px';
+				fish4.style.left = value * -0.2 + 'px';
+				fish6.style.left = value * -0.3 + 'px', fish6.style.top = value * 0.5 + 'px';
+				text.style.marginLeft = value * -0.7 + 'px', text.style.marginTop = value * 0.04 + 'px';
+			})
+
+		</script>
+		<div>
+		<script>
+			let leaf3 = document.getElementById('leaf3');
+			let leaf2 = document.getElementById('leaf2');
+			let leaf1 = document.getElementById('leaf1');
+
+			window.addEventListener('scroll', function(){
+				let value = window.scrollY*0.5;
+				leaf1.style.left = value * -1.7 + 'px';
+				leaf2.style.left = value * -1.5 + 'px';
+				leaf3.style.left = value * 0.7 + 'px';
+			})
+		</script>
+		</div>
+	</body>
+</html>
+
+
+
+
+<!--https://imagekit.io/blog/how-to-resize-image-in-html/#:~:text=One%20of%20the%20simplest%20ways,image%20is%20640%C3%97960.-->

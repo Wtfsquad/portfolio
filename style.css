@@ -1,0 +1,263 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Oi&display=swap');
+
+*
+{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Advent Pro', sans-serif;
+	scroll-behavior: smooth;
+}
+
+body
+{
+	min-height: auto;
+	background: #181d1b;
+	background: linear-gradient(transparent,#181d1b);
+}
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding:3% 8%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.6s;
+	z-index: 10005;
+}
+
+header.sticky{ /*悬浮menu*/
+	padding:5% 10%;  /*调整白条长宽*/
+	background: linear-gradient(#0f1211, transparent);
+	z-index: 9999;
+}
+
+
+header .LOGO
+{
+	position: absolute;
+	top:0;
+	left:0;
+	padding:3% 6%;
+	display:flex;
+	justify-content:space-between;
+	align-items: center;
+	z-index: 10000;
+
+
+	color:#fff;
+	font-weight: 900;
+	text-decoration: none;
+	font-size:1em;
+	text-transform:uppercase;
+	letter-spacing: 5px;
+}
+
+header ul{
+	display: flex;
+	justify-content: center;
+	align-items: right;
+
+	position: absolute;
+	display:flex;
+	justify-content:space-between;
+	align-items: right;
+	z-index: 10000;
+	top:0;
+	left:0;
+	padding:3% 77%;
+	letter-spacing: 4px;
+}
+
+header ul li{   /*LAKE and FISHING*/
+	list-style: none;
+	margin-left: 40%;
+	font-weight: 600;
+}
+
+header ul li a{
+	text-decoration: none;
+	border-radius: 14px;
+	padding:6px 15px;
+	color:#7B7B7B;
+}
+
+header ul li a:hover
+/*header ul li a.active*/ {
+	background: #ffffffb8;
+	color:#111;
+	transition: 0.4s;
+}
+
+header ul li a:hover
+/*header ul li a.active*/ {
+	background: #ffffffb8;
+	color:#111;
+	transition: 0.4s;
+}
+
+
+section{
+	position: absolute;
+	width: 100%;
+	height: 170%;  /*调整下面那条鱼*/
+	padding: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section::before{
+	content: '';
+	position:absolute;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+	background:linear-gradient(to top,#0f1311, transparent);
+	z-index:30;
+}
+
+section img{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+	pointer-events: none;
+}
+/*section img#moon{
+	mix-blend-mode: screen;
+}*/
+/*section img#gra{
+	z-index:20;
+}*/
+section img#fish1{
+	z-index: 25;
+}
+section img#fish2{
+	z-index: 24;
+}
+section img#fish4{
+	z-index: 22;
+}
+section img#fish5{
+	z-index: 23;
+}
+section img#fish3{
+	z-index: 18;
+}
+section img#fish6{
+	transform: translate(-8vw, 9vh);
+	z-index: 17;
+}
+#text{ /*CATCH*/
+	left: 50%;
+	top: 55%;
+	position:absolute;
+	color:#fff;
+	white-space: nowrap;
+	font-size: 3.6em;
+	font-weight: 500;
+	z-index: 7;
+	letter-spacing: 9px;
+}
+#btn{   /*FLOAT*/
+	text-decoration: none;
+	padding: 8px 50vw;
+	/*border-radius: 14px;*/
+	font-size: 1em;
+	/*background: rgba(255, 255, 255, 0.149);*/
+	color:#878787b8;
+	z-index: 100000;	
+	letter-spacing: 5px;
+	font-size: 0.8em;
+	font-weight: 500;
+	position: fixed;
+	bottom: 2%;
+	justify-content: center;
+}
+
+#btn:hover{
+	color:#ffffff;
+	transition: 0.4s;}
+
+
+
+.about{
+	font-size: 0.8em;
+	color: rgb(174, 174, 174);
+	font-weight: 700;
+	letter-spacing: 5px;
+	text-transform:uppercase;
+	position: absolute;
+	width: 100%;
+	padding: 95% 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 5;
+	text-align: center;
+	line-height: 3;
+}
+.about em{font-size: 1.2em;}
+.sec{
+	position: relative;
+	padding: 160% 5%;
+	color:#fff;
+	background: #0f1311;
+	/*z-index: 6;*/
+
+}
+
+.sec h3{
+	font-size: 1em;
+	margin-bottom: 10px;
+	color: #fff;
+	font-weight: 50;
+	letter-spacing: 5px;
+	margin-left: 38%;
+	z-index: 10;
+}
+.sec p{
+	font-size: 1em;
+	margin-bottom: 10px;
+	color: #fff;
+	font-weight: 50;
+	letter-spacing: 5px;
+	padding-bottom: 50%;	
+	margin-left: 38%;
+	z-index: 11;
+}
+
+.sec img{
+	position: absolute;
+	top:20%;
+
+	width:120%;
+	height: 40%;
+	object-fit:cover;
+	pointer-events: none;
+	background-size: contain;
+	display: flex;
+	
+}
+
+.sec img#leaf1{
+	z-index: 3200;
+	left:-10%;
+}
+.sec img#leaf2{
+	z-index: 3300;
+	left:30%;
+}
+.sec img#leaf3{
+	z-index: 3400;
+	left:-40%;
+	top: 20%;
+	width: auto;
+}
+
+

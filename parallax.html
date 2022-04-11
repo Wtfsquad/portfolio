@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Mousemove Yushuo</title>
+		<link rel= "stylesheet" type= "text/css" href="style2.css">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet">
+	</head>
+	<body>
+
+
+			<!--<div class="header">
+				<i class="fa fa-bars" onclick="menuToggle()">
+					<ul id="navigation">
+						<li>
+							<a href="#" class="active">Home</a>
+						</li>
+					</ul>
+					<li>
+						<a href="#">About</a>
+					</li>
+			</div>-->
+
+
+
+			<div class="home-menu">
+				<h4>
+					<div class="title">
+					<span>my portfolio</span>
+				</div>
+				</h4>
+				<h5>
+					<div class="menu-content">
+					<span>	 		</span>
+					<span>product</span>
+					<span>visual art</span>
+					<span>application</span>
+					<span>experience</span>
+					<span>playground</span>
+					<span>contact</span>
+				</div>
+				</h5>
+			</div>
+
+
+
+		<section>
+			
+			<img src="fish3.png" data-speed="-1" class="layer">
+			<img src="fish2.png" data-speed="1.5" class="layer">
+			<img src="fish4.png" data-speed="2" class="layer">
+			<h2 class="layer" data-speed="7">Yushuo Ding</h2>
+			<img src="fish6.png" data-speed="1" class="layer"> 
+			<img src="fish5.png" data-speed="2" class="layer">
+			<img src="fish1.png" data-speed="-2" class="layer">
+			
+		</section>
+
+		<script type="text/javascript">
+			document.addEventListener("mousemove", Yushuo);
+			function Yushuo(e){
+				this.querySelectorAll('.layer').forEach(layer =>{
+					const speed = layer.getAttribute('data-speed')
+
+					const x = (window.innerWidth - e.pageX*speed)/100
+					const y = (window.innerHeight - e.pageY/speed)/100
+
+					layer.style.transform = `translateY(${y}px) translateX(${x}px) `
+				})
+			}
+		</script>
+
+		<div class="container">
+  			<section2 class="home-about">
+   		 <div class="home-about-textbox">
+      		<h1>
+      			<span>W</span>
+      			<span>e</span>
+      			<span>l</span>
+      			<span>c</span>
+      			<span>o</span>
+      			<span>m</span>
+      			<span>e&nbsp&nbsp</span>
+      			<span>t</span>
+      			<span>o&nbsp&nbsp</span>
+      			<span>m</span>
+      			<span>y&nbsp&nbsp</span>
+      			<span>p</span>
+      			<span>o</span>
+      			<span>n</span>
+      			<span>d</span>
+
+
+      		</h1>
+    </div>
+  </section2>
+
+<!-- -->
+	<div class="home-game">
+  		<section3 class="game">
+  	<div class="home-game-text">
+  		<h3>
+  			<span>C</span>
+  			<span>A</span>
+  			<span>T</span>
+  			<span>C</span>
+  			<span>H &nbsp&nbsp</span>
+  			<span> </span>
+  			<span>M</span>
+  			<span>E</span>
+  			<span>🐟</span>
+  		</h3>
+  		</div>
+  	</section3>
+
+ 		</div>
+
+
+</div>
+
+	</body>
+</html>
