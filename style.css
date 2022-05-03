@@ -109,7 +109,7 @@ section{
 	justify-content: center;
 	align-items: center;
 }
-section::before{
+section::before{ /*分割渐变*/
 	content: '';
 	position:absolute;
 	bottom: 0;
@@ -198,7 +198,7 @@ section img#fish6{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 5;
+	z-index: 51;
 	text-align: center;
 	line-height: 3;
 }
