@@ -32,7 +32,7 @@ header{
 header.sticky{ /*悬浮menu*/
 	padding:5% 10%;  /*调整白条长宽*/
 	background: linear-gradient(#0f1211, transparent);
-	z-index: 9999;
+	z-index: 999;
 }
 
 header .LOGO
@@ -90,7 +90,7 @@ header ul li a:hover
 /*header ul li a.active*/ {
 	background: #ffffffb8;
 	color:#111;
-    z-index: 10001;
+    z-index: 1000;
     transition: 0.4s;
 }
 
@@ -129,6 +129,13 @@ p{
     transition: 0.4s ease;
 
 }
+
+/* .row .container:active{
+    transform: scale(1.2);
+    z-index: 1;
+    transition: 0.4s ease;
+
+} */
 
 .middle{  
     /* 悬浮textbox */
@@ -263,6 +270,37 @@ h3{
 }
 
 
+.popup-image{
+    position:fixed;
+    top:0; left:0;
+    background:rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    padding-top: 10%;
+    display: none;
+}
+
+.popup-image span{
+    position: absolute;
+    top: 14%; right: 7.5%;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100000;
+}
+
+.popup-image img{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    border: 5px transparent;
+    border-radius: 5px;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
 
 
 @media only screen and (max-width: 800px){
@@ -274,6 +312,13 @@ h3{
     transform: none;
     z-index: 1;
 }
+
+.popup-image img{
+    width: 95%;
+    height: auto;
+}
+
+
 }
 
 /*悬浮menu文字header.sticky ul li a{ 
