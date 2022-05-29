@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Oi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 
 *
 {
@@ -12,7 +13,7 @@
 
 body
 {
-	min-height: 500vh;
+	min-height: 600vh;
 	background: #0f1311;
 }
 header{
@@ -108,8 +109,12 @@ p{
     position: relative;
     transition: transform 500ms;
     display: block;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .container img{
+
     width: 100%;
     opacity: 1;
     height: auto;
@@ -189,6 +194,74 @@ p{
 #btn2:hover{
 	color:#ffffff;
 	transition: 0.4s;}
+
+
+.writing{
+    margin-left: 5%;
+    margin-top: 25%;
+    font-size: 0.9em;
+	color: rgb(174, 174, 174);
+	font-weight: 700;
+	letter-spacing: 2px;
+	/* text-transform:uppercase; */ 
+	position: absolute;
+	width: 90%;
+	justify-content: center;
+	align-items: center;
+	z-index: 51;
+	text-align: left;
+	line-height: 3;
+    font-family: 'Raleway', sans-serif;
+    /* height: 110%; */
+}
+/* .story1{
+    height: 140%;
+    padding-bottom: 5%;
+} */
+
+h3{
+    font-size: 1.5em;
+    align-items: center;
+    text-align: center;
+    font-weight: 1000;
+}
+
+.p2{
+    height: auto;
+}
+
+.expandMoreContent{
+    height: 120px;
+    overflow: hidden;
+    transition: height 0.9s ease-in-out;
+    position: relative;
+}
+
+.expandMoreContent.expand-active{
+    height: auto;
+    transition: height 0.9s ease-in-out;
+}
+
+.expandMoreHolder{
+    padding: 15px 0;
+    text-align: center;
+    height: auto;
+}
+
+.btn-expand-more{
+    cursor: pointer;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    font-weight: 100;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.rockBottom{
+    height: auto;
+}
+
 
 
 
