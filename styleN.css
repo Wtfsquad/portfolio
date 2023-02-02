@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Oi&display=swap');
 
-*
-{
-	margin:0;
+* {
+	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Advent Pro', sans-serif;
 	scroll-behavior: smooth;
 }
 
-body
-{
+body {
 	min-height: 100vh;
 	background: #0f1311;
+	margin: 0;
 }
-header{
+
+header {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding:3% 8%;
+	padding: 3% 8%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -27,191 +27,291 @@ header{
 	z-index: 10005;
 }
 
-header.sticky{ /*悬浮menu*/
-	padding:5% 10%;  /*调整白条长宽*/
+header.sticky {
+	/*悬浮menu*/
+	padding: 5% 10%;
+	/*调整白条长宽*/
 	background: linear-gradient(#0f1211, transparent);
 	z-index: 9999;
 }
 
-header .LOGO
-{
+header .LOGO {
 	position: absolute;
-	top:0;
-	left:0;
-	padding:3% 6%;
-	display:flex;
-	justify-content:space-between;
+	top: 0;
+	left: 0;
+	padding: 3% 6%;
+	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	z-index: 10000;
 
 
-	color:#fff;
+	color: #fff;
 	font-weight: 900;
 	text-decoration: none;
-	font-size:1em;
-	text-transform:uppercase;
+	font-size: 1em;
+	text-transform: uppercase;
 	letter-spacing: 5px;
 }
 
-header ul{
+header ul {
 	display: flex;
 	justify-content: center;
 	align-items: right;
 
 	position: absolute;
-	display:flex;
-	justify-content:space-between;
+	display: flex;
+	justify-content: space-between;
 	align-items: right;
 	z-index: 10000;
-	top:0;
-	left:0;
-	padding:3% 73%;
+	top: 0;
+	left: 0;
+	padding: 3% 73%;
 	letter-spacing: 4px;
 }
 
-header ul li{   /*SURFACE and FISHING*/
+header ul li {
+	/*SURFACE and FISHING*/
 	list-style-type: none;
 	margin-left: 40%;
 	font-weight: 600;
-/*    display: inline-block;
+	/*    display: inline-block;
     position: absolute;*/
 }
 
-header ul li a{
+header ul li a {
 	text-decoration: none;
 	border-radius: 14px;
-	padding:6px 15px;
-	color:#7B7B7B;
+	padding: 6px 15px;
+	color: #7B7B7B;
 }
 
-header ul li a:hover
-/*header ul li a.active*/ {
+header ul li a:hover {
 	background: #ffffffb8;
-	color:#111;
-    z-index: 10001;
-    transition: 0.4s;
+	color: #111;
+	z-index: 10001;
+	transition: 0.4s;
 }
 
-p{
+
+p {
 	/* CATCH ME */
-    font-size: 1.8em;
+	font-size: 2em;
 	color: rgb(174, 174, 174);
 	font-weight: 700;
 	letter-spacing: 5px;
-	text-transform:uppercase;
-	position: absolute;
-	width: 100%;
-	padding: 25% 10%;
+	text-transform: uppercase;
+
+
 	display: flex;
+	position: absolute;
 	justify-content: center;
 	align-items: center;
-	z-index: 5;
 	text-align: center;
+
+	top: 0;
+	left: 25%;
+	width: 50%;
+	height: 60%;
+	margin-top: 20vh;
+	z-index: 999;
 	line-height: 3;
 
 	-webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select:none;
-    -moz-user-select: none;
-    -ms-user-select:none;
-    user-select:none;
+	/*文字无法被选中*/
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
+p span {
+	transition: 1.5s;
+}
+
+p:hover span {
+	filter: blur(20px);
+	opacity: 0;
+	transform: scale(1.5);
+	transition: 1s;
+}
+
+/*p:hover+.container {
+	display: block;
+}*/
+
+/*foldable card starts here*/
+.container {
+	/**/
+	font-size: 5px;
+	color: rgb(174, 174, 174);
+	font-weight: 700;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	top: 0;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+	margin-top: 25vh;
+
+	transition: 0.5s ease-in-out;
+	/*display: none;*/
+	opacity: 100%;
+
+}
+
+
+.card {
+	/*背景方块阴影*/
+	position: absolute;
+	width: 230px;
+	height: 130px;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+	opacity: 0%;
+	transition: 0.5s ease-in-out;
+}
+
+.card .imgbox {
+	/*中间模糊白方块*/
+	position: absolute;
+	background: rgba(33, 33, 33, 0.1);
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	border-radius: 10px;
+	border: 0.6px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(7px);
+	opacity: 100%;
+}
+
+
+.content {
+	position: relative;
+	display: block;
+	height: 40%;
+	z-index: 1001;
+	line-height: 1.7em;
+	opacity: 100%;
+}
+
+.Yushuo {
+	color: #fff;
+	margin-top: 11%;
+	font-size: 2.3em;
+	margin-bottom: 7%;
+}
+
+.detail {
+	color: rgb(199, 199, 199);
+	line-height: 2.5em;
+	font-size: 1.3em;
+	letter-spacing: 2px;
+	text-align: start;
+	margin-left: 14%;
+}
+
+.detail a {
+	color: rgb(174, 174, 174);
+	text-underline-offset: 1.5px;
+}
+
+.card:hover {
+	opacity: 100%;
+	transition: opacity 0.5s ease-in-out;
+	transform: scale(1.7);
+	-webkit-transform: scale(1.7);
+	-ms-transform: scale(1.7);
+	transition: 0.5s ease-in-out;
+	transition-delay: 0.5s ease-in-out;
+
+}
+
+
+/*foldable card stops here*/
+
+
+
 /* 背景鱼 */
-section 
-{
+section {
 	position: relative;
 	width: 100%;
 	height: 140vh;
-	overflow:hidden;
-	display:flex;
+	overflow: hidden;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
 
-section img
-{
-	position:absolute;
-	top: 0;
-	left:0;
-	width:100%;
-	height:105%;
-	object-fit:cover;
+section img {
+	position: absolute;
+	width: 120%;
+	height: 115%;
+	object-fit: cover;
+	opacity: 100%;
+
+}
+
+section img#fish11 {
+	opacity: 100%;
+}
+
+section img#fish51 {
+	opacity: 130%;
+}
+
+section img#fish6 {
+	opacity: 100%;
+}
+
+section img#fish2 {
+	opacity: 60%;
+}
+
+section img#fish3 {
 	opacity: 30%;
 }
-section h2
-{
+
+/*已发布的文件里没有切换到net的时候鲤鱼位子突然闪跳的问题 但是本地的code不知道有什么问题会出现glitch*/
+
+/*section h2 {
 	letter-spacing: 20px;
 	margin-right: 17%;
 	margin-left: 10%;
-	color:rgba(235, 235, 235, 0.884); 
+	color: rgba(235, 235, 235, 0.884);
 	font-size: 5em;
-  
-}
+
+}*/
 
 
-h4 span{
+/*h4 span {
 	margin-left: 3.5%;
-	margin-top: 2.5%;	
-	object-fit:cover;
+	margin-top: 2.5%;
+	object-fit: cover;
 	letter-spacing: 5px;
 	color: #b9b9b9de;
 	font-size: 16px;
 	text-transform: uppercase;
 	position: fixed;
-}
-
-.middle{  
-    /* 悬浮textbox */
-    background-color: rgba(0, 0, 0, 0.868);
-    /* font-size: 1em; */
-	display: block;
-    padding: 16px 32px;
-    transition: 0.4s ease;
-    opacity: 0.5;
-    top: 50%;
-    left: 36%;
-    width: 27%; 
-	position: absolute;
-    height: 18%;
-    /* transform: translate(-50%, -50%); */
-    text-align:center;
-    border-radius: 20px;
-	/* filter:blur(4px); */
-}
-.middle:hover,
-.middle:focus{
-    opacity: 1;    
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.159);
-    transition: 0.5s ease;
-
-}
-
-p span
-{
-	transition: 2s;
-
-}
-
-p:hover span
-{
-	filter:blur(20px);
-	opacity:0;
-	transform:scale(1.5);
-	transition: 2s;
-}
+}*/
 
 
-section img#fish1{
-	opacity: 100%;
-}
-section img#fish5{
-	opacity: 80%;
-}
-section img#fish2{
-	opacity: 60%;
-}
+
 
 /* .App{
 	min-height:100vh;
